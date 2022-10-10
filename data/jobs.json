@@ -1,0 +1,41 @@
+[
+  {
+    "title": "Junior Front-End Web Developer",
+    "vacancy": 3,
+    "jobType": "full-time",
+    "officeType": "remote",
+    "location": "dhaka",
+    "responsibilities": [
+      "Launch, maintain, and update a variety of websites",
+      "Optimize sites for scale and feasibility",
+      "Work with a team of front end developers to create awesome websites",
+      "Accurately replicating mock ups into fully fledged websites",
+      "Collaborate with content writers and designers"
+    ],
+    "qualifications": [
+      "1+ year of experience working with HTML and CSS",
+      "1+ year of experience converting design files into HTML and CSS",
+      "1+ year of experience working with JavaScript and jQuery",
+      "Knowledge of responsive design, some experience implementing within a project or website",
+      "Working knowledge of CSS Frameworks, preferably Bootstrap",
+      "Working knowledge of CSS Preprocessors (SASS, LESS)",
+      "Experience using version control tools like git"
+    ],
+    "officeTime": "9 AM - 5 PM",
+    "salary": 40000,
+    "benefits": [
+      "Great Wage",
+      "WFH comfort package",
+      "22 days paid time off (29 days after 3 years. Flexible time off after 5 years!)",
+      "4% retirement matching through a Charles Schwab 401(k)",
+      "100% employer-paid medical, dental and vision for employees",
+      "Maternity and Paternity Leave",
+      "Flexible hours",
+      "Coffee shop next door"
+    ],
+    "hiringManager": {
+      "name": "Parves Hossain",
+      "id": "634436b7e7737e79116884fa"
+    }
+  }
+]

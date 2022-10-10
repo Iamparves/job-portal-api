@@ -1,0 +1,20 @@
+{
+  "name": "job-portal",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Iamparves/job-portal",
+  "author": "Parves Hossain Rabby",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.6.5",
+    "validator": "^13.7.0"
+  }
+}
