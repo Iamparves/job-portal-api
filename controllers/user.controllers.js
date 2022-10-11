@@ -75,11 +75,13 @@ module.exports.login = async (req, res) => {
 
 module.exports.getMe = async (req, res) => {
   try {
-    // const user = await findUserByEmail(req.user?.email);
+    const user = await findUserByEmail(req.user?.email);
+
+    const {password, ...others} = user.toObject();
 
     res.status(200).send({
       success: true,
-      data: req.user,
+      data: others,
     });
   } catch (err) {
     res.status(400).send({
