@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const validator = require("validator");
 const ObjectId = mongoose.Types.ObjectId;
 
 const jobSchema = mongoose.Schema(
@@ -60,6 +61,11 @@ const jobSchema = mongoose.Schema(
         type: String,
       },
     ],
+    deadline: {
+      type: Date,
+      required: [true, "please provide a deadline date"],
+      validate: [validator.isDate, "please provide a valid date"],
+    },
     hiringManager: {
       name: String,
       id: {

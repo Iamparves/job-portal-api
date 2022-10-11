@@ -11,6 +11,18 @@ module.exports.getJobsService = async () => {
 };
 
 module.exports.getJobByIdService = async (jobId) => {
-  const job = await Job.findById(jobId).select("-candidates").populate("hiringManager.id", "-password -resume");
+  const job = await Job.findById(jobId)
+    .select("-candidates")
+    .populate("hiringManager.id", "-password -resume");
   return job;
+};
+
+module.exports.updateJobService = async (jobId, updateData) => {
+  const result = await Job.updateOne(
+    { _id: jobId },
+    { $set: updateData },
+    { runValidators: true }
+  );
+
+  return result;
 };
