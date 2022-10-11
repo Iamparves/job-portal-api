@@ -1,4 +1,6 @@
+const mongoose = require("mongoose");
 const Job = require("../models/Job");
+const ObjectId = mongoose.Types.ObjectId;
 
 module.exports.createJobService = async (jobData) => {
   const result = await Job.create(jobData);
@@ -25,4 +27,9 @@ module.exports.updateJobService = async (jobId, updateData) => {
   );
 
   return result;
+};
+
+module.exports.getManagerJobService = async (managerId) => {
+  const jobs = await Job.find({ "hiringManager.id": ObjectId(managerId) });
+  return jobs;
 };

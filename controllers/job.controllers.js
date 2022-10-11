@@ -3,6 +3,7 @@ const {
   getJobsService,
   getJobByIdService,
   updateJobService,
+  getManagerJobService,
 } = require("../services/job.services");
 
 module.exports.createJob = async (req, res) => {
@@ -62,6 +63,25 @@ module.exports.updateJob = async (req, res) => {
     res.status(200).send({
       success: true,
       message: "Job updated successfully",
+    });
+  } catch (err) {
+    res.status(400).send({
+      success: false,
+      error: err.message,
+    });
+  }
+};
+
+module.exports.getManagerJob = async (req, res) => {
+  try {
+    const user = req.user;
+
+    const jobs = await getManagerJobService(user.id);
+
+    res.status(200).send({
+      success: true,
+      message: "Jobs found successfully",
+      data: jobs,
     });
   } catch (err) {
     res.status(400).send({

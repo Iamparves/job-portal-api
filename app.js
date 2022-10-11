@@ -7,9 +7,11 @@ app.use(express.json());
 
 const jobRoutes = require("./routes/v1/job.routes");
 const userRoutes = require("./routes/v1/user.routes");
+const managerRoutes = require("./routes/v1/manager.routes");
 
 app.use("/api/v1/jobs", jobRoutes);
 app.use("/api/v1/user", userRoutes);
+app.use("/api/v1/manager/jobs", managerRoutes);
 
 app.get("/", (_req, res) => {
   res.send("Welcome to Job Portal");
