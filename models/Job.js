@@ -90,6 +90,13 @@ const jobSchema = mongoose.Schema(
   }
 );
 
+jobSchema.methods.checkDeadlineOver = function () {
+  const date = new Date();
+  const isDeadlineOver = date > this.deadline;
+
+  return isDeadlineOver;
+}
+
 const Job = mongoose.model("Job", jobSchema);
 
 module.exports = Job;

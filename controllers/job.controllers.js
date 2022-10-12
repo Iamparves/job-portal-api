@@ -4,6 +4,7 @@ const {
   getJobByIdService,
   updateJobService,
   getManagerJobService,
+  applyJobService,
 } = require("../services/job.services");
 
 module.exports.createJob = async (req, res) => {
@@ -53,10 +54,12 @@ module.exports.getJobById = async (req, res) => {
   try {
     const job = await getJobByIdService(req.params.id);
 
+    const { candidates, ...others } = job.toObject();
+
     res.status(200).send({
       success: true,
       message: "Job found successfully",
-      data: job,
+      data: others,
     });
   } catch (err) {
     res.status(400).send({
@@ -92,6 +95,49 @@ module.exports.getManagerJob = async (req, res) => {
       success: true,
       message: "Jobs found successfully",
       data: jobs,
+    });
+  } catch (err) {
+    res.status(400).send({
+      success: false,
+      error: err.message,
+    });
+  }
+};
+
+module.exports.applyJob = async (req, res) => {
+  try {
+    const job = await getJobByIdService(req.params.id);
+
+    if (!job) {
+      return res.status(400).send({
+        success: false,
+        error: "Didn't find the job",
+      });
+    }
+
+    const isDeadlineOver = job.checkDeadlineOver();
+
+    if (isDeadlineOver) {
+      return res.status(400).send({
+        success: false,
+        error: "Deadline is over",
+      });
+    }
+
+    const applied = job.candidates.findIndex((cand) => cand.id == req.user.id);
+
+    if (applied >= 0) {
+      return res.status(400).send({
+        success: false,
+        error: "You already applied for this job",
+      });
+    }
+
+    const result = await applyJobService(job, req.user);
+
+    res.status(200).send({
+      success: true,
+      message: "Job application successful",
     });
   } catch (err) {
     res.status(400).send({

@@ -85,7 +85,7 @@ const userSchema = mongoose.Schema(
         values: ["active", "inactive", "blocked"],
         message: "status can't be {VALUE}",
       },
-      default: "inactive",
+      default: "active",
     },
   },
   {

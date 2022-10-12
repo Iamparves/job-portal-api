@@ -11,6 +11,10 @@ router
   .get(jobController.getJobs);
 
 router
+  .route("/:id/apply")
+  .post(verifyToken, authorization("candidate"), jobController.applyJob);
+
+router
   .route("/:id")
   .get(jobController.getJobById)
   .patch(verifyToken, authorization("hiring-manager"), jobController.updateJob);

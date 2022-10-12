@@ -1,4 +1,5 @@
 const Job = require("../models/Job");
+const User = require("../models/User");
 
 module.exports.createJobService = async (jobData) => {
   const result = await Job.create(jobData);
@@ -19,9 +20,10 @@ module.exports.getJobsService = async (filters, queries) => {
 };
 
 module.exports.getJobByIdService = async (jobId) => {
-  const job = await Job.findById(jobId)
-    .select("-candidates")
-    .populate("hiringManager.id", "-password -resume");
+  const job = await Job.findById(jobId).populate(
+    "hiringManager.id",
+    "-password -resume"
+  );
   return job;
 };
 
@@ -38,4 +40,28 @@ module.exports.updateJobService = async (jobId, updateData) => {
 module.exports.getManagerJobService = async (managerId) => {
   const jobs = await Job.find({ "hiringManager.id": managerId });
   return jobs;
+};
+
+module.exports.applyJobService = async (job, user) => {
+  const result = await Job.updateOne(
+    { _id: job._id },
+    {
+      $push: {
+        candidates: { name: user.name, applyDate: new Date(), id: user.id },
+      },
+    },
+    { runValidators: true }
+  );
+
+  const result2 = await User.updateOne(
+    { _id: user.id },
+    {
+      $push: {
+        appliedJobs: { title: job.title, applyDate: new Date(), id: job._id },
+      },
+    },
+    { runValidators: true }
+  );
+
+  return [result, result2];
 };
