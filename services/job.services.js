@@ -42,6 +42,11 @@ module.exports.getManagerJobService = async (managerId) => {
   return jobs;
 };
 
+module.exports.getManagerJobByIdService = async (jobId) => {
+  const jobs = await Job.findById(jobId).populate("candidates.id", "-password -appliedJobs");
+  return jobs;
+};
+
 module.exports.applyJobService = async (job, user) => {
   const result = await Job.updateOne(
     { _id: job._id },

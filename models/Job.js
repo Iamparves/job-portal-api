@@ -95,7 +95,7 @@ jobSchema.methods.checkDeadlineOver = function () {
   const isDeadlineOver = date > this.deadline;
 
   return isDeadlineOver;
-}
+};
 
 const Job = mongoose.model("Job", jobSchema);
 

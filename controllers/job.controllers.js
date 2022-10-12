@@ -5,6 +5,7 @@ const {
   updateJobService,
   getManagerJobService,
   applyJobService,
+  getManagerJobByIdService,
 } = require("../services/job.services");
 
 module.exports.createJob = async (req, res) => {
@@ -95,6 +96,30 @@ module.exports.getManagerJob = async (req, res) => {
       success: true,
       message: "Jobs found successfully",
       data: jobs,
+    });
+  } catch (err) {
+    res.status(400).send({
+      success: false,
+      error: err.message,
+    });
+  }
+};
+
+module.exports.getManagerJobById = async (req, res) => {
+  try {
+    const job = await getManagerJobByIdService(req.params.id);
+
+    if (job.hiringManager.id != req.user.id) {
+      return res.status(400).send({
+        success: false,
+        error: "This job isn't managed by you",
+      });
+    }
+
+    res.status(200).send({
+      success: true,
+      message: "Job found successfully",
+      data: job,
     });
   } catch (err) {
     res.status(400).send({
