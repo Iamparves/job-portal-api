@@ -24,7 +24,17 @@ module.exports.createJob = async (req, res) => {
 
 module.exports.getJobs = async (req, res) => {
   try {
-    const jobs = await getJobsService();
+    const { sort, fields, page, limit, ...filters } = req.query;
+    const queries = {};
+
+    queries.sort = sort ? sort.split(",").join(" ") : "";
+    queries.fields = fields
+      ? fields.split(",").join(" ")
+      : "-candidates -hiringManager";
+    queries.page = page ? +page : 1;
+    queries.limit = limit ? +limit : 0;
+
+    const jobs = await getJobsService(filters, queries);
 
     res.status(200).send({
       success: true,

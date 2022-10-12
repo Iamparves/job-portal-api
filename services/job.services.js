@@ -1,15 +1,21 @@
-const mongoose = require("mongoose");
 const Job = require("../models/Job");
-const ObjectId = mongoose.Types.ObjectId;
 
 module.exports.createJobService = async (jobData) => {
   const result = await Job.create(jobData);
   return result;
 };
 
-module.exports.getJobsService = async () => {
-  const jobs = await Job.find({}).select("-candidates -hiringManager");
-  return jobs;
+module.exports.getJobsService = async (filters, queries) => {
+  const jobs = await Job.find(filters)
+    .select(queries.fields)
+    .skip((queries.page - 1) * queries.limit)
+    .limit(queries.limit)
+    .sort(queries.sort);
+
+  const total = await Job.countDocuments(filters);
+  const page = queries.limit ? Math.ceil(total / queries.limit) : 1;
+
+  return { total, page, jobs };
 };
 
 module.exports.getJobByIdService = async (jobId) => {
@@ -30,6 +36,6 @@ module.exports.updateJobService = async (jobId, updateData) => {
 };
 
 module.exports.getManagerJobService = async (managerId) => {
-  const jobs = await Job.find({ "hiringManager.id": ObjectId(managerId) });
+  const jobs = await Job.find({ "hiringManager.id": managerId });
   return jobs;
 };

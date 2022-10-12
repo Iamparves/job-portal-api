@@ -77,6 +77,7 @@ const jobSchema = mongoose.Schema(
     candidates: [
       {
         name: String,
+        applyDate: Date,
         id: {
           type: ObjectId,
           ref: "User",

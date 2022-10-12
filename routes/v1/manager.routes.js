@@ -13,4 +13,12 @@ router
     jobController.getManagerJob
   );
 
+// router
+//   .route("/:id")
+//   .get(
+//     verifyToken,
+//     authorization("hiring-manager"),
+//     jobController.getManagerJobById
+//   );
+
 module.exports = router;

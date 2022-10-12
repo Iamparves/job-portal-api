@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const validator = require("validator");
 const bcrypt = require("bcryptjs");
+const ObjectId = mongoose.Types.ObjectId;
 
 const userSchema = mongoose.Schema(
   {
@@ -68,6 +69,16 @@ const userSchema = mongoose.Schema(
       },
       default: "candidate",
     },
+    appliedJobs: [
+      {
+        title: String,
+        applyDate: Date,
+        id: {
+          type: ObjectId,
+          ref: "Job",
+        },
+      },
+    ],
     status: {
       type: String,
       enum: {
