@@ -43,7 +43,10 @@ module.exports.getManagerJobService = async (managerId) => {
 };
 
 module.exports.getManagerJobByIdService = async (jobId) => {
-  const jobs = await Job.findById(jobId).populate("candidates.id", "-password -appliedJobs");
+  const jobs = await Job.findById(jobId).populate(
+    "candidates.id",
+    "-password -appliedJobs"
+  );
   return jobs;
 };
 
@@ -54,6 +57,7 @@ module.exports.applyJobService = async (job, user) => {
       $push: {
         candidates: { name: user.name, applyDate: new Date(), id: user.id },
       },
+      $inc: { applicantCount: 1 },
     },
     { runValidators: true }
   );
@@ -69,4 +73,20 @@ module.exports.applyJobService = async (job, user) => {
   );
 
   return [result, result2];
+};
+
+module.exports.getTopPaidJobsService = async () => {
+  const jobs = await Job.find({})
+    .sort("-salary")
+    .limit(10)
+    .select("-candidates");
+  return jobs;
+};
+
+module.exports.getMostAppliedJobsService = async () => {
+  const jobs = await Job.find({})
+    .sort("-applicantCount")
+    .limit(5)
+    .select("-candidates");
+  return jobs;
 };

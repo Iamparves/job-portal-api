@@ -1,0 +1,79 @@
+[
+  {
+    "email": "admin@gmail.com",
+    "password": "Admin123#",
+    "confirmPassword": "Admin123#",
+    "firstName": "Mr.",
+    "lastName": "Admin",
+    "role": "admin"
+  },
+  {
+    "email": "parves@gmail.com",
+    "password": "Parves_123",
+    "confirmPassword": "Parves_123",
+    "firstName": "Parves Hossain",
+    "lastName": "Rabby",
+    "role": "admin"
+  },
+  {
+    "email": "hotaro@gmail.com",
+    "password": "Hotaro_123",
+    "confirmPassword": "Hotaro_123",
+    "firstName": "Hotaro",
+    "lastName": "Oreki",
+    "role": "hiring-manager"
+  },
+  {
+    "email": "chitanda@gmail.com",
+    "password": "Chitanda_123",
+    "confirmPassword": "Chitanda_123",
+    "firstName": "Eru",
+    "lastName": "Chitanda",
+    "role": "hiring-manager"
+  },
+  {
+    "email": "tanjiro@gmail.com",
+    "password": "Tanjiro_123",
+    "confirmPassword": "Tanjiro_123",
+    "firstName": "Tanjiro",
+    "lastName": "Kamado",
+    "resume": "https://i.pinimg.com/originals/ae/9c/0f/ae9c0f020039d76962adbcbd3db4a3d1.jpg",
+    "role": "candidate"
+  },
+  {
+    "email": "chiyo@gmail.com",
+    "password": "Chiyo_123",
+    "confirmPassword": "Chiyo_123",
+    "firstName": "Chiyo",
+    "lastName": "Sakura",
+    "resume": "https://i.pinimg.com/originals/ae/9c/0f/ae9c0f020039d76962adbcbd3db4a3d1.jpg",
+    "role": "candidate"
+  },
+  {
+    "email": "luffy@gmail.com",
+    "password": "Luffy_123",
+    "confirmPassword": "Luffy_123",
+    "firstName": "Monkey D.",
+    "lastName": "Luffy",
+    "resume": "https://i.pinimg.com/originals/ae/9c/0f/ae9c0f020039d76962adbcbd3db4a3d1.jpg",
+    "role": "candidate"
+  },
+  {
+    "email": "akihito@gmail.com",
+    "password": "Akihito_123",
+    "confirmPassword": "Akihito_123",
+    "firstName": "Akihito",
+    "lastName": "Kanbara",
+    "resume": "https://i.pinimg.com/originals/ae/9c/0f/ae9c0f020039d76962adbcbd3db4a3d1.jpg",
+    "role": "candidate"
+  },
+  {
+    "email": "yui@gmail.com",
+    "password": "Yui_123",
+    "confirmPassword": "Yui_123",
+    "firstName": "Yui",
+    "lastName": "Hirasawa",
+    "resume": "https://i.pinimg.com/originals/ae/9c/0f/ae9c0f020039d76962adbcbd3db4a3d1.jpg",
+    "role": "candidate"
+  }
+]

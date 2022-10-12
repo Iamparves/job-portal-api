@@ -10,6 +10,9 @@ router
   .post(verifyToken, authorization("hiring-manager"), jobController.createJob)
   .get(jobController.getJobs);
 
+router.get("/top-paid", jobController.getTopPaidJobs);
+router.get("/most-applied", jobController.getMostAppliedJobs);
+
 router
   .route("/:id/apply")
   .post(verifyToken, authorization("candidate"), jobController.applyJob);

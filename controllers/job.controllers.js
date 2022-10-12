@@ -6,11 +6,19 @@ const {
   getManagerJobService,
   applyJobService,
   getManagerJobByIdService,
+  getTopPaidJobsService,
+  getMostAppliedJobsService,
 } = require("../services/job.services");
 
 module.exports.createJob = async (req, res) => {
   try {
-    const result = await createJobService(req.body);
+    const jobData = { ...req.body };
+    jobData.hiringManager = {
+      name: req.user.name,
+      id: req.user.id,
+    };
+
+    const result = await createJobService(jobData);
 
     res.status(200).send({
       success: true,
@@ -163,6 +171,40 @@ module.exports.applyJob = async (req, res) => {
     res.status(200).send({
       success: true,
       message: "Job application successful",
+    });
+  } catch (err) {
+    res.status(400).send({
+      success: false,
+      error: err.message,
+    });
+  }
+};
+
+module.exports.getTopPaidJobs = async (req, res) => {
+  try {
+    const jobs = await getTopPaidJobsService();
+
+    res.status(200).send({
+      success: true,
+      message: "Found the top paid jobs",
+      data: jobs,
+    });
+  } catch (err) {
+    res.status(400).send({
+      success: false,
+      error: err.message,
+    });
+  }
+};
+
+module.exports.getMostAppliedJobs = async (req, res) => {
+  try {
+    const jobs = await getMostAppliedJobsService();
+
+    res.status(200).send({
+      success: true,
+      message: "Found the most applied jobs",
+      data: jobs,
     });
   } catch (err) {
     res.status(400).send({

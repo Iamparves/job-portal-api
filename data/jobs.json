@@ -33,9 +33,330 @@
       "Flexible hours",
       "Coffee shop next door"
     ],
-    "hiringManager": {
-      "name": "Parves Hossain",
-      "id": "634436b7e7737e79116884fa"
-    }
+    "deadline": "2022-10-18"
+  },
+  {
+    "title": "MERN Stack Developer",
+    "vacancy": 1,
+    "jobType": "full-time",
+    "officeType": "office",
+    "location": "dhaka",
+    "responsibilities": [
+      "Launch, maintain, and update a variety of websites",
+      "Optimize sites for scale and feasibility",
+      "Work with a team of front end developers to create awesome websites",
+      "Accurately replicating mock ups into fully fledged websites",
+      "Collaborate with content writers and designers"
+    ],
+    "qualifications": [
+      "1+ year of experience working with HTML and CSS",
+      "1+ year of experience converting design files into HTML and CSS",
+      "1+ year of experience working with JavaScript and jQuery",
+      "Knowledge of responsive design, some experience implementing within a project or website",
+      "Working knowledge of CSS Frameworks, preferably Bootstrap",
+      "Working knowledge of CSS Preprocessors (SASS, LESS)",
+      "Experience using version control tools like git"
+    ],
+    "officeTime": "9 AM - 5 PM",
+    "salary": 60000,
+    "benefits": [
+      "Great Wage",
+      "WFH comfort package",
+      "22 days paid time off (29 days after 3 years. Flexible time off after 5 years!)",
+      "4% retirement matching through a Charles Schwab 401(k)",
+      "100% employer-paid medical, dental and vision for employees",
+      "Maternity and Paternity Leave",
+      "Flexible hours",
+      "Coffee shop next door"
+    ],
+    "deadline": "2022-10-25"
+  },
+  {
+    "title": "Front-End Web Developer",
+    "vacancy": 2,
+    "jobType": "part-time",
+    "officeType": "remote",
+    "location": "rajshahi",
+    "responsibilities": [
+      "Launch, maintain, and update a variety of websites",
+      "Optimize sites for scale and feasibility",
+      "Work with a team of front end developers to create awesome websites",
+      "Accurately replicating mock ups into fully fledged websites",
+      "Collaborate with content writers and designers"
+    ],
+    "qualifications": [
+      "1+ year of experience working with HTML and CSS",
+      "1+ year of experience converting design files into HTML and CSS",
+      "1+ year of experience working with JavaScript and jQuery",
+      "Knowledge of responsive design, some experience implementing within a project or website",
+      "Working knowledge of CSS Frameworks, preferably Bootstrap",
+      "Working knowledge of CSS Preprocessors (SASS, LESS)",
+      "Experience using version control tools like git"
+    ],
+    "officeTime": "8 AM - 5 PM",
+    "salary": 30000,
+    "benefits": [
+      "Great Wage",
+      "WFH comfort package",
+      "22 days paid time off (29 days after 3 years. Flexible time off after 5 years!)",
+      "4% retirement matching through a Charles Schwab 401(k)",
+      "100% employer-paid medical, dental and vision for employees",
+      "Maternity and Paternity Leave",
+      "Flexible hours",
+      "Coffee shop next door"
+    ],
+    "deadline": "2022-10-20"
+  },
+  {
+    "title": "Junior Back-End Web Developer",
+    "vacancy": 2,
+    "jobType": "part-time",
+    "officeType": "remote",
+    "location": "dhaka",
+    "responsibilities": [
+      "Launch, maintain, and update a variety of websites",
+      "Optimize sites for scale and feasibility",
+      "Work with a team of front end developers to create awesome websites",
+      "Accurately replicating mock ups into fully fledged websites",
+      "Collaborate with content writers and designers"
+    ],
+    "qualifications": [
+      "1+ year of experience working with HTML and CSS",
+      "1+ year of experience converting design files into HTML and CSS",
+      "1+ year of experience working with JavaScript and jQuery",
+      "Knowledge of responsive design, some experience implementing within a project or website",
+      "Working knowledge of CSS Frameworks, preferably Bootstrap",
+      "Working knowledge of CSS Preprocessors (SASS, LESS)",
+      "Experience using version control tools like git"
+    ],
+    "officeTime": "10 AM - 6 PM",
+    "salary": 30000,
+    "benefits": [
+      "Great Wage",
+      "WFH comfort package",
+      "22 days paid time off (29 days after 3 years. Flexible time off after 5 years!)",
+      "4% retirement matching through a Charles Schwab 401(k)",
+      "100% employer-paid medical, dental and vision for employees",
+      "Maternity and Paternity Leave",
+      "Flexible hours",
+      "Coffee shop next door"
+    ],
+    "deadline": "2022-11-01"
+  },
+  {
+    "title": "React Native Developer",
+    "vacancy": 1,
+    "jobType": "full-time",
+    "officeType": "remote",
+    "location": "rajshahi",
+    "responsibilities": [
+      "Launch, maintain, and update a variety of websites",
+      "Optimize sites for scale and feasibility",
+      "Work with a team of front end developers to create awesome websites",
+      "Accurately replicating mock ups into fully fledged websites",
+      "Collaborate with content writers and designers"
+    ],
+    "qualifications": [
+      "1+ year of experience working with HTML and CSS",
+      "1+ year of experience converting design files into HTML and CSS",
+      "1+ year of experience working with JavaScript and jQuery",
+      "Knowledge of responsive design, some experience implementing within a project or website",
+      "Working knowledge of CSS Frameworks, preferably Bootstrap",
+      "Working knowledge of CSS Preprocessors (SASS, LESS)",
+      "Experience using version control tools like git"
+    ],
+    "officeTime": "9 AM - 5 PM",
+    "salary": 40000,
+    "benefits": [
+      "Great Wage",
+      "WFH comfort package",
+      "22 days paid time off (29 days after 3 years. Flexible time off after 5 years!)",
+      "4% retirement matching through a Charles Schwab 401(k)",
+      "100% employer-paid medical, dental and vision for employees",
+      "Maternity and Paternity Leave",
+      "Flexible hours",
+      "Coffee shop next door"
+    ],
+    "deadline": "2022-11-07"
+  },
+  {
+    "title": "Laravel Web Developer",
+    "vacancy": 1,
+    "jobType": "full-time",
+    "officeType": "office",
+    "location": "rajshahi",
+    "responsibilities": [
+      "Launch, maintain, and update a variety of websites",
+      "Optimize sites for scale and feasibility",
+      "Work with a team of front end developers to create awesome websites",
+      "Accurately replicating mock ups into fully fledged websites",
+      "Collaborate with content writers and designers"
+    ],
+    "qualifications": [
+      "1+ year of experience working with HTML and CSS",
+      "1+ year of experience converting design files into HTML and CSS",
+      "1+ year of experience working with JavaScript and jQuery",
+      "Knowledge of responsive design, some experience implementing within a project or website",
+      "Working knowledge of CSS Frameworks, preferably Bootstrap",
+      "Working knowledge of CSS Preprocessors (SASS, LESS)",
+      "Experience using version control tools like git"
+    ],
+    "officeTime": "10 AM - 5 PM",
+    "salary": 60000,
+    "benefits": [
+      "Great Wage",
+      "WFH comfort package",
+      "22 days paid time off (29 days after 3 years. Flexible time off after 5 years!)",
+      "4% retirement matching through a Charles Schwab 401(k)",
+      "100% employer-paid medical, dental and vision for employees",
+      "Maternity and Paternity Leave",
+      "Flexible hours",
+      "Coffee shop next door"
+    ],
+    "deadline": "2022-10-28"
+  },
+  {
+    "title": "Senior UI/UX Designer",
+    "vacancy": 2,
+    "jobType": "full-time",
+    "officeType": "office",
+    "location": "dhaka",
+    "responsibilities": [
+      "Launch, maintain, and update a variety of websites",
+      "Optimize sites for scale and feasibility",
+      "Work with a team of front end developers to create awesome websites",
+      "Accurately replicating mock ups into fully fledged websites",
+      "Collaborate with content writers and designers"
+    ],
+    "qualifications": [
+      "1+ year of experience working with HTML and CSS",
+      "1+ year of experience converting design files into HTML and CSS",
+      "1+ year of experience working with JavaScript and jQuery",
+      "Knowledge of responsive design, some experience implementing within a project or website",
+      "Working knowledge of CSS Frameworks, preferably Bootstrap",
+      "Working knowledge of CSS Preprocessors (SASS, LESS)",
+      "Experience using version control tools like git"
+    ],
+    "officeTime": "9 AM - 5 PM",
+    "salary": 50000,
+    "benefits": [
+      "Great Wage",
+      "WFH comfort package",
+      "22 days paid time off (29 days after 3 years. Flexible time off after 5 years!)",
+      "4% retirement matching through a Charles Schwab 401(k)",
+      "100% employer-paid medical, dental and vision for employees",
+      "Maternity and Paternity Leave",
+      "Flexible hours",
+      "Coffee shop next door"
+    ],
+    "deadline": "2022-10-31"
+  },
+  {
+    "title": ".NET Developer",
+    "vacancy": 1,
+    "jobType": "part-time",
+    "officeType": "remote",
+    "location": "rajshahi",
+    "responsibilities": [
+      "Launch, maintain, and update a variety of websites",
+      "Optimize sites for scale and feasibility",
+      "Work with a team of front end developers to create awesome websites",
+      "Accurately replicating mock ups into fully fledged websites",
+      "Collaborate with content writers and designers"
+    ],
+    "qualifications": [
+      "1+ year of experience working with HTML and CSS",
+      "1+ year of experience converting design files into HTML and CSS",
+      "1+ year of experience working with JavaScript and jQuery",
+      "Knowledge of responsive design, some experience implementing within a project or website",
+      "Working knowledge of CSS Frameworks, preferably Bootstrap",
+      "Working knowledge of CSS Preprocessors (SASS, LESS)",
+      "Experience using version control tools like git"
+    ],
+    "officeTime": "8 AM - 4 PM",
+    "salary": 70000,
+    "benefits": [
+      "Great Wage",
+      "WFH comfort package",
+      "22 days paid time off (29 days after 3 years. Flexible time off after 5 years!)",
+      "4% retirement matching through a Charles Schwab 401(k)",
+      "100% employer-paid medical, dental and vision for employees",
+      "Maternity and Paternity Leave",
+      "Flexible hours",
+      "Coffee shop next door"
+    ],
+    "deadline": "2022-11-05"
+  },
+  {
+    "title": "Wordpress Developer",
+    "vacancy": 1,
+    "jobType": "full-time",
+    "officeType": "office",
+    "location": "rajshahi",
+    "responsibilities": [
+      "Launch, maintain, and update a variety of websites",
+      "Optimize sites for scale and feasibility",
+      "Work with a team of front end developers to create awesome websites",
+      "Accurately replicating mock ups into fully fledged websites",
+      "Collaborate with content writers and designers"
+    ],
+    "qualifications": [
+      "1+ year of experience working with HTML and CSS",
+      "1+ year of experience converting design files into HTML and CSS",
+      "1+ year of experience working with JavaScript and jQuery",
+      "Knowledge of responsive design, some experience implementing within a project or website",
+      "Working knowledge of CSS Frameworks, preferably Bootstrap",
+      "Working knowledge of CSS Preprocessors (SASS, LESS)",
+      "Experience using version control tools like git"
+    ],
+    "officeTime": "9 AM - 5 PM",
+    "salary": 50000,
+    "benefits": [
+      "Great Wage",
+      "WFH comfort package",
+      "22 days paid time off (29 days after 3 years. Flexible time off after 5 years!)",
+      "4% retirement matching through a Charles Schwab 401(k)",
+      "100% employer-paid medical, dental and vision for employees",
+      "Maternity and Paternity Leave",
+      "Flexible hours",
+      "Coffee shop next door"
+    ],
+    "deadline": "2022-10-10"
+  },
+  {
+    "title": "Junior Fullstack Web Developer",
+    "vacancy": 3,
+    "jobType": "part-time",
+    "officeType": "office",
+    "location": "dhaka",
+    "responsibilities": [
+      "Launch, maintain, and update a variety of websites",
+      "Optimize sites for scale and feasibility",
+      "Work with a team of front end developers to create awesome websites",
+      "Accurately replicating mock ups into fully fledged websites",
+      "Collaborate with content writers and designers"
+    ],
+    "qualifications": [
+      "1+ year of experience working with HTML and CSS",
+      "1+ year of experience converting design files into HTML and CSS",
+      "1+ year of experience working with JavaScript and jQuery",
+      "Knowledge of responsive design, some experience implementing within a project or website",
+      "Working knowledge of CSS Frameworks, preferably Bootstrap",
+      "Working knowledge of CSS Preprocessors (SASS, LESS)",
+      "Experience using version control tools like git"
+    ],
+    "officeTime": "9 AM - 5 PM",
+    "salary": 30000,
+    "benefits": [
+      "Great Wage",
+      "WFH comfort package",
+      "22 days paid time off (29 days after 3 years. Flexible time off after 5 years!)",
+      "4% retirement matching through a Charles Schwab 401(k)",
+      "100% employer-paid medical, dental and vision for employees",
+      "Maternity and Paternity Leave",
+      "Flexible hours",
+      "Coffee shop next door"
+    ],
+    "deadline": "2022-10-22"
   }
 ]

@@ -74,6 +74,10 @@ const jobSchema = mongoose.Schema(
         required: true,
       },
     },
+    applicantCount: {
+      type: Number,
+      default: 0,
+    },
     candidates: [
       {
         name: String,
