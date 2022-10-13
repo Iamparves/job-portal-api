@@ -103,6 +103,17 @@ userSchema.pre("save", function (next) {
   next();
 });
 
+userSchema.pre("updateOne", function (next) {
+  const data = this.getUpdate();
+  const password = data["$set"].password;
+
+  if (password) {
+    data["$set"].password = bcrypt.hashSync(password);
+  }
+
+  next();
+});
+
 userSchema.methods.comparePassword = function (password, hashedPassword) {
   const isPasswordValid = bcrypt.compareSync(password, hashedPassword);
   return isPasswordValid;

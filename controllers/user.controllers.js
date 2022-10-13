@@ -1,4 +1,11 @@
-const { signupService, findUserByEmail } = require("../services/user.services");
+const {
+  signupService,
+  findUserByEmail,
+  getCandidatesService,
+  getHiringManagersService,
+  getCandidateByIdService,
+  updateUserService,
+} = require("../services/user.services");
 const { generateToken } = require("../utils/token");
 
 module.exports.signup = async (req, res, next) => {
@@ -77,13 +84,81 @@ module.exports.getMe = async (req, res) => {
   try {
     const user = await findUserByEmail(req.user?.email);
 
-    const {password, ...others} = user.toObject();
+    const { password, ...others } = user.toObject();
 
     res.status(200).send({
       success: true,
       data: others,
     });
   } catch (err) {
+    res.status(400).send({
+      success: false,
+      error: err.message,
+    });
+  }
+};
+
+module.exports.getCandidates = async (req, res) => {
+  try {
+    const candidates = await getCandidatesService();
+
+    res.status(200).send({
+      success: true,
+      message: "Found all candidates",
+      data: candidates,
+    });
+  } catch (err) {
+    res.status(400).send({
+      success: false,
+      error: err.message,
+    });
+  }
+};
+
+module.exports.getCandidateById = async (req, res) => {
+  try {
+    const candidate = await getCandidateByIdService(req.params.id);
+
+    res.status(200).send({
+      success: true,
+      message: "Found the candidate",
+      data: candidate,
+    });
+  } catch (err) {
+    res.status(400).send({
+      success: false,
+      error: err.message,
+    });
+  }
+};
+
+module.exports.getHiringManagers = async (req, res) => {
+  try {
+    const managers = await getHiringManagersService();
+
+    res.status(200).send({
+      success: true,
+      message: "Found all hiring managers",
+      data: managers,
+    });
+  } catch (err) {
+    res.status(400).send({
+      success: false,
+      error: err.message,
+    });
+  }
+};
+
+module.exports.updateUser = async (req, res) => {
+  try {
+    const result = await updateUserService(req.params.id, req.body);
+
+    res.status(200).send({
+      success: true,
+      message: "User updated successfully",
+    });
+  } catch (err) {
+    console.log(err);
     res.status(400).send({
       success: false,
       error: err.message,
